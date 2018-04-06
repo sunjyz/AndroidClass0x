@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainSearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="From"/>
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:entries="@array/ports">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="To"/>
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:entries="@array/ports">
+
+        </Spinner>
+
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="wait to do"
+        />
+
+    <Button
+        android:id="@+id/Search_Flights_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Flights"/>
+
+    <include layout="@layout/flights_list"/>
+    <include layout="@layout/back"/>
+
+
+
+</LinearLayout>
