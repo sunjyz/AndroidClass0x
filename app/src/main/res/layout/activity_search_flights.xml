@@ -3,58 +3,84 @@
     android:id="@+id/mainSearch"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"   >
-
+    android:orientation="vertical"
+    android:layout_margin="15dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wsc_topic"
+        android:layout_marginBottom="10dp"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="From"/>
         <Spinner
-            android:layout_width="0dp"
+            android:id="@+id/from_spinner"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:entries="@array/ports">
-
-        </Spinner>
+            android:gravity="end"
+            android:layout_weight="1"
+            android:layout_marginRight="28dp"/>
 
     </LinearLayout>
+
+    <include layout="@layout/spilt_line"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="To"/>
         <Spinner
-            android:layout_width="0dp"
+            android:id="@+id/to_spinner"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:entries="@array/ports">
-
-        </Spinner>
+            android:gravity="end"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"/>
 
     </LinearLayout>
-    <EditText
+
+    <include layout="@layout/spilt_line"/>
+
+    <TextView
+        android:id="@+id/date_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="wait to do"
+        android:text=" "
+
+        android:onClick="showDatePickerDialog"
         />
 
+    <include layout="@layout/spilt_line"/>
+
     <Button
-        android:id="@+id/Search_Flights_Button"
+        android:id="@+id/Search_Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search Flights"/>
+        android:text="Search Flights"
+        android:layout_marginBottom="10dp"
+        android:onClick="searchFlights"
+        android:background="@drawable/bt_search_shape"/>
 
     <include layout="@layout/flights_list"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"/>
+
     <include layout="@layout/back"/>
 
 
